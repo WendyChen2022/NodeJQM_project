@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="javascripts/index.js"></script>
+    <link rel="shortcut icon" href="images/my.ico">
+    
+
+    <title>First JQM App</title>
+</head>
+<body>
+    
+    <!-- home page -->
+    <div data-role="page" id="home" data-theme='a'>
+        
+
+        <!-- header --> 
+        <div data-role="header" data-theme='a'>
+            <h2>PLANT HUB</h2>
+        
+            <div data-role="navbar">
+                <ul>
+                <li><a href="index.html#home" >Home Page</a></li>
+                <li><a href="index.html#Load" >Add New Plant</a></li>
+                <li><a href="index.html#ListAll" >Plant List</a></li>
+
+                </ul>
+            </div><!-- /navbar -->
+        </div>  
+
+        <!-- content -->
+        <div data-role="content" data-theme='a'>
+            <h2 class="hobbies"> Discover Your Plants </h2>
+            <div class="images">
+                
+                <div class="imgcontainer">
+                    <img src="images/Plants.jpg" alt="Various House Plants">
+                </div>
+                
+            </div>
+
+        </div>
+
+          <!-- notes footer --> 
+          <div data-role="footer" data-theme='a'>
+            <h3>Copyrigtht 2024 by Qiwen and Sally</h3>
+        </div>
+    </div>
+  
+
+
+   <!-- Plant list Page -->
+    <div data-role="page" id="ListAll" data-theme='a'>
+        
+        <!-- header --> 
+        <div data-role="header" data-theme='a'>
+            <h2>YOUR PLANT LIST</h2>
+
+            <div data-role="navbar" >
+                <ul>
+                    <li><a href="index.html#home" >Home Page</a></li>
+                    <li><a href="index.html#Load" >Add New Plant</a></li>
+                    <li><a href="index.html#ListAll" >Plant List</a></li>
+    
+                </ul>
+            </div><!-- /navbar -->
+
+        </div>
+
+        <!-- content -->
+        <div data-role="content" data-theme='a'>
+            
+            <!--display-->
+            <h2>Plants lists</h2>
+            <ul id="myul" data-role="listview"> </ul>
+            
+        </div>
+
+        <!-- notes footer --> 
+        <div data-role="footer" data-theme='a'>
+            <h3>Copyrigtht 2024 by Qiwen and Sally</h3>
+        </div>
+    </div>
+
+
+      <!-- plant page -->
+    <div data-role="page" id="Load" data-theme='a'>
+        
+        <!-- header --> 
+        <div data-role="header" data-theme='a'>
+             <h2> ADD YOUR NEW PLANT</h2>
+       
+
+            <div data-role="navbar" >
+                <ul>
+                    <li><a href="index.html#home" >Home Page</a></li>
+                    <li><a href="index.html#Load" >Add New Plant</a></li>
+                    <li><a href="index.html#ListAll" >Plant List</a></li>
+    
+                </ul>
+            </div><!-- /navbar -->
+        </div>
+
+        <!-- content -->
+        <div data-role="content" data-theme='a'>
+           <h2>Add Your Latest Plant Discoveries</h2>
+            Name of Plant <br />
+            <input type="text" value="" id="plantName" /><br />
+            Light Requirement (High, Medium, Low) <br />
+            <input type="text" id="lightRequirement" value="" /><br />
+            Humidity Level (High, Medium, Low) <br />
+            <input type="text" id="humidityLevel" value="" /><br />
+            
+            
+
+            <!--Dropdown menu for plants-->
+            <label for="select-type">Select Water Requirement: </label>
+            <select name="select-type" id="select-type">
+                <option value="onceAWeek">Once or Twice a Week</option>
+                <option value="Daily">Daily</option>
+                <option value="onceAMonth">Once or Twice a Month</option>
+            </select> <br/>
+            <button id="addPlant" type="button" >Add Plant Information</button>  <br />
+            <input type="button" value="Clear Data" id="buttonClear" data-inline="true" />
+    
+        </div>
+
+        <!-- notes footer --> 
+        <div data-role="footer" data-theme='a'>
+            <h3>Copyrigtht 2024 by Qiwen and Sally</h3>
+        </div>
+    </div>
+
+    <!-- Detail Page -->
+    <div data-role="page" id="details" data-theme='a'>
+        
+        <!-- header --> 
+        <div data-role="header" data-theme='a'>
+            <h2> PLANT DETAIL</h2>
+      
+
+           <div data-role="navbar" >
+               <ul>
+                <li><a href="index.html#home" >Home Page</a></li>
+                <li><a href="index.html#Load" >Add New Plant</a></li>
+                <li><a href="index.html#ListAll" >Plant List</a></li>
+   
+               </ul>
+           </div><!-- /navbar -->
+       </div>
+
+        <!-- content -->
+        <div data-role="content" data-theme='a'>
+            
+            <!--display-->
+            <h2>Ensuring Your Plants Thrive: Care Tips</h2>
+            <h3 class="plant-name"></h3>
+            <p class="light-requirement"><strong>Light Requirement:</strong></p>
+            <p class="water-requirement"><strong>Water Requirement:</strong></p>
+            <p class="humidity-level"> <strong>Humidity Level:</strong></p>
+            
+        </div>
+        <div>
+          <input type="button" value="Delete this plant" id="delete" />
+        </div>
+
+        <!-- notes footer --> 
+        <div data-role="footer" data-theme='a'>
+            <h3>Copyrigtht 2024 by Qiwen and Sally</h3>
+        </div>
+    </div>
+    
+    <!--<script src="javascripts/index.js"></script>-->
+</body>
+</html>

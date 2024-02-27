@@ -1,0 +1,100 @@
+/* General styling */
+
+html {
+    font-size: 16px;
+    
+}
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: #f1d5cb;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styling */
+[data-role="header"] {
+    background-color: #92a689;
+    color: rgb(23, 23, 23);
+    text-align: center;
+    padding: 20px;
+}
+
+/* Navbar styling */
+[data-role="navbar"] {
+    border: none;
+}
+
+
+/* Content styling */
+[data-role="content"] {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Footer styling */
+[data-role="footer"] {
+    background-color: #92a689; /* Dark green */
+    color: rgb(27, 26, 26);
+    text-align: center;
+    padding: 15px;
+}
+
+/* Button styling */
+button {
+    color: #fff;
+    border: 1px solid black;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Input field styling */
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* List item styling */
+[data-role="listview"] li {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+
+/* Tea and Plant-specific styling */
+#teaDisplay,
+#plantDisplay {
+    list-style-type: none;
+    padding: 20px;
+}
+
+#teaDisplay li,
+#plantDisplay li {
+    margin-bottom: 16px;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+}
+
+/* Image styling */
+.images {
+    display: flex;
+    justify-content: center;
+}
+.imgcontainer {
+    width: 65%;
+    height: 500px;
+    overflow: hidden;
+}
+.imgcontainer img {
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+    margin: 0 auto;
+    border-radius: 7px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
