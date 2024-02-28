@@ -23,13 +23,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
     createList();
 
+    // document.getElementById("listBotton").addEventListener("click", redirectToListAllPage);
+    // document.getElementById("homeBotton").addEventListener("click", redirectToHomePage);
+    // document.getElementById("addBotton").addEventListener("click", redirectToLoadPage);
+    
+    
+
+    // function redirectToHomePage() {
+    //     $.mobile.navigate("#home", { transition: "flip" });
+    // }
+    
+    // function redirectToLoadPage() {
+    //     $.mobile.navigate("#Load", { transition: "flip" });
+    // }
+    
+    // function redirectToListAllPage() {
+    //     $.mobile.navigate("#ListAll", { transition: "flip" });
+    // }
+    
+
 // add button events ************************************************************************
     
     document.getElementById("addPlant").addEventListener("click", function () {
         let newPlant = new PlantObject(document.getElementById("plantName").value, 
         document.getElementById("lightRequirement").value,
         document.getElementById("humidityLevel").value,
-        selectedType);
+        document.getElementById("select-type").value);
         
         //document.location.href = "index.html#ListAll";
         // also add the URL value
@@ -43,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
         contentType: "application/json; charset=utf-8",
         success: function (result) {
             console.log(result);
-            $.mobile.changePage("#ListAll", { transition: "flip" });
+            $.mobile.navigate("#ListAll", { transition: "flip" });
             },
         error: function (xhr, textStatus, errorThrown) {  
             alert("Server could not add Plant: " + newPlant.name);
@@ -116,7 +135,7 @@ document.addEventListener("DOMContentLoaded", function () {
         $("#plantName").val("");
         $("#lightRequirement").val("");
         $("#humidityLevel").val("");
-        $("#select-type").val("");
+        $("#select-type").val("Daily");
         console.log("Load page will be shown!");
     });
 
@@ -130,14 +149,15 @@ document.addEventListener("DOMContentLoaded", function () {
     
     let pointer = GetObjectPointer(localID);
     console.log(pointer);
+    console.log(plantArray[pointer]);
     
-   
+    
 
       
-    document.getElementById("plantName").innerHTML = "Plant Name: " + plantArray[pointer].name;
-    document.getElementById("lightRequirement").innerHTML = "Light Requirement: " + plantArray[pointer].light;
-    document.getElementById("humidityLevel").innerHTML = "Humidity Level: " + plantArray[pointer].humidity;
-    document.getElementById("select-type").innerHTML = "Water Requirement: " + plantArray[pointer].water;
+    document.getElementById("plant-name").innerText = "Plant Name: " + plantArray[pointer].name;
+    document.getElementById("light-requirement").innerText = "Light Requirement: " + plantArray[pointer].light;
+    document.getElementById("humidity-level").innerText = "Humidity Level: " + plantArray[pointer].humidity;
+    document.getElementById("water-requirement").innerText= "Water Requirement: " + plantArray[pointer].water;
     
     });
  
@@ -148,7 +168,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function GetObjectPointer(whichID){
     for(i=0; i< plantArray.length; i++){
-        if(plantArray[i].ID = whichID){
+        if(plantArray[i].ID === whichID){
             return i;
         }
     }
