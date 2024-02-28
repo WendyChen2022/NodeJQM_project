@@ -23,23 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     createList();
 
-    // document.getElementById("listBotton").addEventListener("click", redirectToListAllPage);
-    // document.getElementById("homeBotton").addEventListener("click", redirectToHomePage);
-    // document.getElementById("addBotton").addEventListener("click", redirectToLoadPage);
-    
-    
-
-    // function redirectToHomePage() {
-    //     $.mobile.navigate("#home", { transition: "flip" });
-    // }
-    
-    // function redirectToLoadPage() {
-    //     $.mobile.navigate("#Load", { transition: "flip" });
-    // }
-    
-    // function redirectToListAllPage() {
-    //     $.mobile.navigate("#ListAll", { transition: "flip" });
-    // }
     
 
 // add button events ************************************************************************
